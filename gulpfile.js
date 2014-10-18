@@ -32,9 +32,9 @@ gulp.task('clean', del.bind(null, ['./index.js', './assertRank.js', './specs.js'
 
 gulp.task('es6', ['clean'], function () {
   return gulp.src(['./src/**/*.js'])
-    .pipe($.sourcemaps.init({loadMaps: true}))
+    // .pipe($.sourcemaps.init({loadMaps: true}))
     .pipe($['6to5']()).on('error', console.error.bind(console))
-    .pipe($.sourcemaps.write())
+    // .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.'))
     .pipe($.size({title: 'es6'}))
 })
