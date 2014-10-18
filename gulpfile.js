@@ -41,7 +41,7 @@ gulp.task('es6', ['clean'], function () {
 
 gulp.task('browserify', ['es6'], function () {
   return gulp.src(['./specs.js'])
-    .pipe($.browserify({debug: true}))
+    .pipe($.browserify({debug: false}))
     .pipe(gulp.dest('.'))
     .pipe($.size({title: 'browserify'}))
 })
